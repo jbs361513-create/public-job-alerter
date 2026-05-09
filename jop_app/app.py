@@ -79,3 +79,8 @@ elif df is None:
     st.info("조회된 데이터가 없습니다. 페이지 번호를 조절해 보세요.")
 else:
     st.error(df) # 에러 메시지 출력
+if isinstance(df, pd.DataFrame) and not df.empty:
+    # 인덱스를 1부터 시작하도록 변경
+    df.index = df.index + 1 
+    
+    # ... 이후 출력 로직 ...
