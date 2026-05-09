@@ -96,3 +96,14 @@ if isinstance(df, pd.DataFrame):
 
 elif isinstance(df, str):
     st.warning(df)
+
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+session = requests.Session()
+retry = Retry(connect=3, backoff_factor=0.5)
+adapter = HTTPAdapter(max_retries=retry)
+session.mount('https://', adapter)
+
+# 이제 session.get(...)을 사용하세요
