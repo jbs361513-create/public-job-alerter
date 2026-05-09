@@ -5,7 +5,7 @@ import xmltodict
 
 # 1. API 설정
 # 사용자가 제공한 인증키를 바로 적용했습니다.
-API_KEY = "	dc305c4d0abc3cb89807335cb6775032c45c4f2942b70c74b82b705f139aa715"
+API_KEY = "dc305c4d0abc3cb89807335cb6775032c45c4f2942b70c74b82b705f139aa715"
 URL = "https://openapi.alio.go.kr/openapi/service/recruit/list"
 
 def get_job_data(page_no=1, num_rows=10):
