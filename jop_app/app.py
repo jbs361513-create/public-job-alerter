@@ -26,7 +26,7 @@ def get_job_data(page_no=1, num_rows=10):
 
 # 2. UI 레이아웃
 st.set_page_config(page_title="공공기관 채용 알리미", layout="wide")
-st.title("🏛️ 실시간 공공기관 채용 정보")
+st.title("🏛️ 실시간 공공기관 채용 정보(1513조은혁)")
 
 page = st.sidebar.number_input("페이지 번호", min_value=1, value=1)
 rows = st.sidebar.slider("조회 개수", 5, 50, 10)
